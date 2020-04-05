@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>App Chat</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-col size="10">
+      <ion-card>
+          
+        <ion-card-header>
+          <ion-card-title>Profile</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <img *ngIf="imageUser" class="center user-avatar" [src]="imageUser">
+          <ion-label position="stacked">Picture</ion-label>
+          <ion-input placeholder="Type URL picture"  [(ngModel)]="imageUser"></ion-input>
+          <ion-label position="stacked">Username</ion-label>
+          <ion-input placeholder="Type your username..." [(ngModel)]="username"></ion-input>
+          <br>
+          <section>
+            <ion-button 
+              [disabled]="!username.trim()" 
+              expand="block" 
+              class="center" 
+              color="primary" 
+              shape="round" 
+              fill="outline"
+              (click)="submitUsername()">Submit</ion-button>
+          </section>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-grid>
+</ion-content>
+
+
+

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      App Chat
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+ 
+  <ion-grid>
+    <ion-text color="medium" text-center>
+      <p>You joined the chat as {{ currentUser }}</p>
+    </ion-text>
+    <ion-row *ngFor="let message of messages">
+ 
+      <ion-col *ngIf="message.user !== currentUser" class="message other-message">
+        <ion-item>
+          <ion-avatar slot="start">
+            <img [src]="message.image">
+          </ion-avatar>
+          <ion-label>
+            <h3>{{ message.user }}</h3>
+            <p>{{ message.msg }}</p>
+            <p>{{ message.createdAt | date:'short' }}</p>
+          </ion-label>
+        </ion-item>  
+      </ion-col>
+ 
+      <ion-col *ngIf="message.user === currentUser" class="message my-message">
+        <ion-item>
+          <ion-avatar slot="end">
+            <img [src]="message.image">
+          </ion-avatar>
+          <ion-label>
+            <h3>{{ message.user }}</h3>
+            <p>{{ message.msg }}</p>
+            <p>{{ message.createdAt | date:'short' }}</p>
+          </ion-label>
+        </ion-item>  
+      </ion-col>
+ 
+    </ion-row>
+  </ion-grid>
+ 
+</ion-content>
+ 
+<ion-footer>
+  <ion-row align-items-center>
+    <ion-col size="10">
+      <ion-item>
+        <ion-textarea auto-focus="true" placeholder="Type something..." cols="2" color="default" auto-grow class="message-input" [(ngModel)]="message"></ion-textarea>
+      </ion-item>
+    </ion-col>
+    <ion-col size="2">
+      <ion-button style="float: right;" expand="block" fill="clear" color="primary" [disabled]="message === ''" class="msg-btn ion-text-center"
+        (click)="sendMessage()">
+        <ion-icon name="send-outline"></ion-icon>
+      </ion-button>
+    </ion-col>  
+  </ion-row>  
+</ion-footer>
