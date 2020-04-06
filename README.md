@@ -1,8 +1,8 @@
-#Ionic Chat
+# Ionic Chat
 
 Um aplicativo de chat desenvolvido em Ionic com a utilização de Socket.IO.
 
-#Ambiente de Desenvolvimento
+# Ambiente de Desenvolvimento
 
 Para configurar o projeto, é necessário realizar os seguintes passos:
 
