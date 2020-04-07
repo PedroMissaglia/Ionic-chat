@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: 'config-profile',
     loadChildren: () => import('./config-profile/config-profile.module').then( m => m.ConfigProfilePageModule)
+  },  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
+
 ];
 
 @NgModule({

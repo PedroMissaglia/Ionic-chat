@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>App Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-row style="padding-top: 10%;">
+    <ion-title>Welcome, {{username}}</ion-title>
+  </ion-row>
+
+  <ion-title style="padding-top: 10%;">Events</ion-title>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)="goToForumChat()">
+          <ion-card-header>
+            <img src="https://www.riosoft.com.br/wp-content/uploads/2019/04/post_chat.png">
+            <ion-card-title>Chat</ion-card-title>
+            <ion-card-subtitle>Global chat</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            Fórum
+          </ion-card-header>
+          <ion-card-content>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row> 
+    <ion-title style="padding-top: 10%;">Calendar</ion-title>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)="goToForumChat()">
+          <ion-card-header>
+            <img src="https://icons.iconarchive.com/icons/paomedia/small-n-flat/512/calendar-icon.png">
+            <ion-card-title>Calendar</ion-card-title>
+            <ion-card-subtitle>My accorded tasks</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            Fórum
+          </ion-card-header>
+          <ion-card-content>
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
+</ion-content>

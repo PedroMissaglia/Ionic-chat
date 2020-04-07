@@ -25,7 +25,7 @@ export class ConfigProfilePage implements OnInit{
     this.userService.setUserName(this.username);
     this.userService.setUserProfileImage(this.imageUser);
 
-    this.router.navigate(['home']);
+    this.router.navigate(['menu']);
   }
 
 }

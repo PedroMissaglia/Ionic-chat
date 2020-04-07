@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
 import { ToastController } from '@ionic/angular';
 import { UserService } from '../user/user-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ export class HomePage implements OnInit{
   constructor(
     private socket: Socket,
     private toastCtrl: ToastController,
-    private userService: UserService) {}
+    private userService: UserService,
+    private router: Router) {}
   
   ngOnInit(){
     this.socket.connect();
@@ -63,6 +65,10 @@ export class HomePage implements OnInit{
       duration: 2000
     });
     toast.present();
+  }
+
+  goToMenuPage(){
+    this.router.navigate(['menu']);
   }
 
 }

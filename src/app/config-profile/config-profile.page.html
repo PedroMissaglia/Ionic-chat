@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>App Chat</ion-title>
 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid>
+  <ion-grid style="padding-top: 25%;">
     <ion-col size="10">
       <ion-card>
           
@@ -16,7 +16,7 @@
         <ion-card-content>
           <img *ngIf="imageUser" class="center user-avatar" [src]="imageUser">
           <ion-label position="stacked">Picture</ion-label>
-          <ion-input placeholder="Type URL picture"  [(ngModel)]="imageUser"></ion-input>
+          <ion-textarea row="2" placeholder="Type URL picture"  [(ngModel)]="imageUser"></ion-textarea>
           <ion-label position="stacked">Username</ion-label>
           <ion-input placeholder="Type your username..." [(ngModel)]="username"></ion-input>
           <br>
